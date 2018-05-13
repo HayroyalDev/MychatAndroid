@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/logored"
+    tools:context="com.hayroyalconsult.maverickstl.mychat.activity.SplashActivity"
+    android:orientation="vertical">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:gravity="center_horizontal">
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="286dp"
+           android:src="@drawable/logo" />
+
+       <LinearLayout
+           android:id="@+id/select_form"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:visibility="visible">
+           <android.support.v7.widget.AppCompatButton
+               android:id="@+id/sign_up_btn"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+               android:text="Sign Up"/>
+
+           <android.support.v7.widget.AppCompatButton
+               android:id="@+id/sign_in_btn"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+               android:text="Sign In" />
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/loginform"
+           android:visibility="gone"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:layout_gravity="center_horizontal">
+           <EditText
+               android:id="@+id/username"
+               android:text="mave"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="Username"
+               android:layout_margin="10dp"/>
+           <EditText
+               android:id="@+id/password"
+               android:inputType="textPassword"
+               android:text="123"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="Password"
+               android:layout_margin="10dp"/>
+
+
+           <android.support.v7.widget.AppCompatButton
+               android:id="@+id/submit"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+               android:text="Sign In" />
+
+       </LinearLayout>
+   </LinearLayout>
+
+
+
+</LinearLayout>

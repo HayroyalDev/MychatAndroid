@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        xmlns:bind="http://schemas.android.com/tools"
+        android:layout_marginTop="5dp">
+        <LinearLayout
+            android:id="@+id/chat_text_receiver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/receiver"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/tv_sender_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mavericks"
+                android:textStyle="bold"
+                android:textColor="@color/logored"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"/>
+            <TextView
+                android:id="@+id/tv_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hello Nigga"
+                android:textColor="@android:color/black"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"/>
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_msg"
+                android:textSize="10sp"
+                android:layout_marginTop="10dp"
+                android:text="2018-05-11 15:45:21"
+                android:textColor="@android:color/black"
+                android:gravity="left"
+                android:paddingStart="30dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

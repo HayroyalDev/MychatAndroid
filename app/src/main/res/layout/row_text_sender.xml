@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/rel_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        xmlns:bind="http://schemas.android.com/tools"
+        android:layout_marginTop="@dimen/_5sdp">
+        <LinearLayout
+            android:id="@+id/textchat_sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/sender"
+            android:padding="@dimen/_10sdp"
+            android:layout_alignParentRight="true">
+            <TextView
+                android:id="@+id/tv_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Am Good Yours"
+                android:paddingEnd="30dp"
+                android:paddingStart="10dp"
+                android:textColor="@android:color/black"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_5sdp">
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_msg"
+                    android:textSize="10sp"
+                    android:textColor="@android:color/black"
+                    android:text="22:37"
+                    android:layout_weight="1"
+                    android:paddingEnd="30dp"
+                    android:paddingStart="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
