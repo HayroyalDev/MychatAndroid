@@ -17,7 +17,6 @@ import com.hayroyalconsult.maverickstl.mychat.response.Response
 import com.hayroyalconsult.maverickstl.mychat.utility.AppPreferences
 import com.hayroyalconsult.maverickstl.mychat.utility.DbHelper
 import com.hayroyalconsult.maverickstl.mychat.utility.ModelConverter
-import kotlinx.android.synthetic.main.activity_splash.*
 import rx.Subscriber
 import rx.android.schedulers.AndroidSchedulers
 import rx.schedulers.Schedulers
@@ -45,7 +44,7 @@ class BackgroundService : Service(){
         //appPreferences!!.setFriends(null)
         user  = ModelConverter.GsonToClass<User>(appPreferences!!.getUser()!!)
         context = this
-        retrofitClient  = RetrofitClient(this, RetrofitClient.Defaulthost)
+        retrofitClient  = RetrofitClient(this, appPreferences!!.getBaseUrl())
         dbHelper = DbHelper(this).open()
         Log.e(TAG, "Service Created + $user!!")
         try{

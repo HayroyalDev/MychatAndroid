@@ -158,7 +158,7 @@ class ViewActivity : AppCompatActivity() {
 
     private fun sendMessage(msg : Message) {
         Log.e(TAG, "Send Message")
-        retrofitClient = RetrofitClient(this,RetrofitClient.Defaulthost)
+        retrofitClient  = RetrofitClient(this, appPreference!!.getBaseUrl())
         retrofitClient!!.apiService!!.sendMessage(msg.mid!!,msg.from!!, msg.to!!, msg.message!!)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -193,7 +193,7 @@ class ViewActivity : AppCompatActivity() {
 
     private fun updateStatusApi(mid : String){
         Log.e(TAG, "Get New Friends")
-        retrofitClient = RetrofitClient(this, RetrofitClient.Defaulthost)
+        retrofitClient  = RetrofitClient(this, appPreference!!.getBaseUrl())
         retrofitClient!!.apiService!!.setMessageStatus(mid, 3)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())

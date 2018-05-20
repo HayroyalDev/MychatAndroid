@@ -34,6 +34,19 @@ class AppPreferences(var context: Context) {
         return spref.getString("friends",null)
     }
 
+    fun getBaseUrl() : String{
+        return spref.getString("ip","http://192.168.8.101:8000/api/")
+    }
+
+    fun setBaseUrl(value : String){
+        if(value != null){
+            val editor = spref.edit()
+            editor.putString("ip", "$value:8000/api/").apply()
+        }else{
+            val editor = spref.edit()
+            editor.putString("ip", "http://192.168.8.100:8000").apply()
+        }
+    }
 
     fun clear(){
         spref.edit().clear().apply()

@@ -52,7 +52,7 @@ class ViewChatAdapter(var context: Context, var list: ArrayList<Message>, var us
         }
         holder.time!!.text = list[position].created_at
         holder.message!!.text = list[position].message
-        return convertView!!
+        return convertView
     }
 
     override fun getItemViewType(position: Int): Int {

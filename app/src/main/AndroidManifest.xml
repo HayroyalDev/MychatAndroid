@@ -35,6 +35,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.hayroyalconsult.maverickstl.mychat.activity.ChatActivity" />
         </activity>
+        <activity
+            android:name=".activity.IpActivity"
+            android:label="@string/title_activity_ip"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

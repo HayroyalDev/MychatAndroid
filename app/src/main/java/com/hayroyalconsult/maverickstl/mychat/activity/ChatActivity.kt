@@ -177,6 +177,9 @@ class ChatActivity : AppCompatActivity() {
             R.id.search -> {
                 showSearchDialog()
             }
+            R.id.change_ip -> {
+                startActivity(Intent(this@ChatActivity, IpActivity::class.java))
+            }
             R.id.sign_out -> {
                 db!!.truncateMessage()
                 appPreference!!.clear()

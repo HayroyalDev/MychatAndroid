@@ -8,6 +8,10 @@
         android:icon="@android:drawable/ic_menu_search"
         app:showAsAction="always"/>
     <item
+        android:title="Change Ip Address"
+        android:id="@+id/change_ip"
+        app:showAsAction="never"/>
+    <item
         android:title="Sign Out"
         android:id="@+id/sign_out"
         app:showAsAction="never"/>

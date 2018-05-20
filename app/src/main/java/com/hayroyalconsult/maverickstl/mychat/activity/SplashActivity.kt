@@ -75,7 +75,8 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun createOrLogUser() {
-        retrofitClient = RetrofitClient(this, RetrofitClient.Defaulthost)
+        Log.e(TAG, appPreferences!!.getBaseUrl())
+        retrofitClient  = RetrofitClient(this, appPreferences!!.getBaseUrl())
         retrofitClient!!.apiService!!.createOrLogUser(select, username.text.toString(), password.text.toString())
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
